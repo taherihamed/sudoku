@@ -39,3 +39,7 @@ default_borads={
 
 def select_difficulty():
     difficulty = input("Select difficulty (easy, medium, hard): ").lower()
+    while difficulty not in default_borads:
+        print("Invalid choice. Please select easy, medium, or hard.")
+        difficulty = input("Select difficulty (easy, medium, hard): ").lower()
+    return  difficulty
